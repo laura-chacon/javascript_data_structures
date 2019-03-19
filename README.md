@@ -1,1 +1,13 @@
-# javascript_data_structures
+# Javascript Data Structures
+
+## Set up
+
+```
+npm install
+```
+
+## Run tests
+
+```
+npm run test
+```
