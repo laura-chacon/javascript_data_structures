@@ -90,7 +90,7 @@ export default class LinkedList {
           }
           inserted = true;
         }
-        i++;
+        i += 1;
         previousNode = currentNode;
         currentNode = currentNode.getNext();
       }

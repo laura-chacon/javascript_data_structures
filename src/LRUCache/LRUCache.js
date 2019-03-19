@@ -14,13 +14,12 @@ export default class LRUCache {
       this.delete(key);
     }
     if (this.currentSize === this.maxSize) {
-      const { key } = this.doubleLinkedList.getTail().getValue();
-      this.delete(key);
+      this.delete(this.doubleLinkedList.getTail().getValue().key);
     }
     const node = new DoubleLinkedListNode({ key, value });
     this.map[key] = node;
     this.doubleLinkedList.insert(node, 0);
-    this.currentSize++;
+    this.currentSize += 1;
   }
 
   lookup(key) {
@@ -37,7 +36,7 @@ export default class LRUCache {
     if (node) {
       delete this.map[key];
       this.doubleLinkedList.delete(node);
-      this.currentSize--;
+      this.currentSize -= 1;
     }
   }
 

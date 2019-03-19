@@ -86,7 +86,7 @@ export default class DoubleLinkedList {
           }
           inserted = true;
         }
-        i++;
+        i += 1;
         currentNode = currentNode.getNext();
       }
       if (!inserted) {
